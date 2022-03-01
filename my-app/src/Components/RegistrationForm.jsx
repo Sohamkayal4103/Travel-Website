@@ -8,6 +8,8 @@ function RegistrationForm(){
     const[formValues,setFormValues] = useState(initialValues);
     const[errorValues,setFormErrors] = useState({});
     const[isSubmit,setIsSubmit] = useState(false);
+    const[successMsg,setSuccessMsg] = useState({});
+
     const handleChange = (e) =>{
         const{name,value} = e.target;
         setFormValues({...formValues, [name] : value});
@@ -19,7 +21,6 @@ function RegistrationForm(){
         setIsSubmit(true);
 
         const newPerson = { ...formValues };
- 
         await fetch("http://localhost:5000/record/add", {
             method: "POST",
             headers: {
@@ -39,10 +40,16 @@ function RegistrationForm(){
         // console.log(JSON.stringify(formValues));
     }
 
+    const handleSuccess = () => {
+        const msgSuccess={};
+        msgSuccess.message="Registered Successfully";
+        return msgSuccess;
+    }
     useEffect(() => {
         console.log(errorValues);
         if(Object.keys(errorValues).length === 0 && isSubmit){
             console.log(JSON.stringify(formValues));
+            setSuccessMsg(handleSuccess()); 
         }
     },[errorValues]);
 
@@ -102,6 +109,12 @@ function RegistrationForm(){
                 />
                 <p>{errorValues.password}</p>
                 <button type="submit" >Submit</button>
+                <p 
+                    className="successMsg"
+                    style={{
+                        color:"green"
+                    }}
+                >{successMsg.message}</p>
             </form>
         </div>
     )
