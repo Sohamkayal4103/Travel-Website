@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+.nav-items{
+    list-style: none;
+    display: flex;
+}
+.nav-items li{
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgb(248, 70, 70);
+    
+}
+.nav-items li:hover{
+    cursor: pointer;
+}
+.nav{
+    /* background-color: black;
+    color: white; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 5px 5px 15px rgb(88, 88, 88);
+}
+.nav-logo img{
+    margin-top: 5px;
+    margin-left: 15px;
+    width: 130px;
+    padding: 5px;
+}
+.nav-brand{
+    display: flex;
+    align-items: center;
+}
+.footer{
+    margin-bottom: 0px;
+}
+/* .hero img{
+    height: 650px;
+    width: 100vw;
+} */
+.hero{
+    width: 100%;
+    height: 660px;
+    background-image:
+    linear-gradient(to bottom, rgba(94, 94, 95, 0.231), rgba(44, 43, 44, 0.197)),
+    url('https://www.worldatlas.com/r/w1200/upload/5c/36/ae/shutterstock-1014644104.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.written_content h1{
+    position: absolute;
+    bottom: 300px;
+    margin-left: 15px;
+    font-size: 2.4rem;
+    width: 300px;
+    font-weight: bolder;
+    left: 595px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+.written_content p {
+    position: absolute;
+    bottom: 250px;
+    font-weight: bold;
+    margin-left: 15px;
+    font-size: 1.4rem;
+    font-family: 'Poppins', sans-serif;
+    left: 560px;
+}
+.card img{
+    width: 300px;
+    border-radius: 15px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+.card{
+    margin-left: 50px;
+    margin-top: 15px;
+    width: 300px;
+    height: 420px;
+    margin-bottom: 30px;
+    border-radius: 30px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    background-color: whitesmoke;
+    box-shadow: 6px 6px 8px 6px #bdbdbd;
+}
+.card_text{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+.card_title{
+    font-size: 1.4rem;
+    margin-top: 5px;
+    font-weight: bold;
+}
+.card_price{
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.673);
+}
+.card_info{
+    color: rgba(0, 0, 0, 0.673);
+    width: 120px;
+}
+.written_content h1:hover{
+    color: white;
+    font-weight: bolder; 
+    transition: ease-in-out;  
+    font-size: 2.4rem;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.422)
+}
+
+.regForm{
+    position: absolute;
+    margin: auto;
+    left: 550px;
+    width: 400px;
+    background-color: rgba(245, 245, 245, 0.306);
+    top: 200px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    height: 400px;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+.regForm label {
+    margin: 10px;
+    font-size: 18px;    
+    font-weight: bold;
+}
+.regForm input {
+    height: 30px;
+    margin-left: 20px;
+    border-radius: 10px;
+    width: 350px;
+}
+.regForm button {
+    width: 150px;
+    align-items: center;
+    height: 30px;
+    margin-left: 120px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    background-color: rgba(245, 245, 245, 0.442);
+    margin-top: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.regForm p{
+    margin-left: 20px;
+    font-size: 1rem;
+    color: red;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
